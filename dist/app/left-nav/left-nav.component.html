@@ -1,0 +1,11 @@
+<div id="burgerDiv" [class]="borderStatus">
+  <ul class="coloredUl">
+    <li><i  id="burger" class="glyphicon glyphicon-menu-hamburger" (click)=onClick()></i></li>
+  </ul>
+
+  <ul class="coloredUl">
+    <li [class]="navStatus" *ngFor=" let navItem of navItems">
+      <app-nav-item (NavItemClicked)="onNavItemClicked($event)" [glyphName]="navItem.glyphName" [navLabel]="navItem.navLabel"></app-nav-item>
+    </li>
+  </ul>
+</div>

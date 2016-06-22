@@ -1,0 +1,39 @@
+.border {
+    width: 130px;
+    border: 2pem;
+    border-color: red;
+    border-style: solid;
+    padding-left: 1em;
+    padding-right:1em;
+    padding-top: 1em;
+    margin-left: 1em;
+}
+
+.borderHidden {
+    width: 50px;
+    border: 2pem;
+    border-color: red;
+    border-style: solid;
+    padding-left: 1em;
+    padding-top: 1em;
+    margin-left: 1em;
+}
+
+.coloredUl {
+    color: darkblue;
+    list-style: none;
+    overflow:auto;
+    height:auto;
+    padding-left: 0em;
+}
+
+.longLi {
+    overflow: hidden;
+    height:auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.shortLi {
+    overflow:hidden;
+    height:20px;
+}

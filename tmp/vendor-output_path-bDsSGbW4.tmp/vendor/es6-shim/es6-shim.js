@@ -1,0 +1,1 @@
+/Users/liezelg/Documents/WebTake1/tmp/vendor-input_base_path-KAAGZgVm.tmp/0/es6-shim/es6-shim.js

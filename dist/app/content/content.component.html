@@ -1,0 +1,33 @@
+<div *ngIf="isShowing">
+
+<form #prospect="ngForm">
+  <div class="border form-group">
+    <label for="selProspectingActivity">Prposecting Activity</label>
+    <select id="selProspectActivity" class="form-control" ngControl="selProspAct" #selProspAct="ngForm" required>
+    <option value="" disabled>Choose one</option>
+    <option value="2">Cold Call</option>
+    <option value="1">Mailer</option>
+  </select>
+    <div *ngIf="selProspAct.touched && selProspAct.errors">
+      <div class="alert alert-danger" *ngIf="selProspAct.touched && selProspAct.errors.required">
+        Select a prospecting activity.
+      </div>
+    </div>
+    <label for="txtCustomer">Customer</label>
+    <input ngControl="txtCustomer" #txtCustomer="ngForm" id="txtCustomer" class="form-control" required minlength="3">
+
+    <div *ngIf="txtCustomer.touched && txtCustomer.errors">
+      {{txtCustomer.errors | json}}
+
+      <div class="alert alert-danger" *ngIf="txtCustomer.errors.required">
+        Customer Name is required.
+      </div>
+      <div class="alert alert-danger" *ngIf="txtCustomer.touched && txtCustomer.errors.minlength">
+        Customer Name should have at least {{txtCustomer.errors.minlength.requiredLength}}</div>
+    </div>
+    <button class="btn btn-success btn-submit" type="submit" [disabled]='!prospect.valid' id="updProspect">
+ Update
+</button>
+  </div>
+</form>
+</div>
